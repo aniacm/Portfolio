@@ -1,103 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Portfolio</title>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script>
-		console.log("欢迎欢迎啦");
-	</script>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+    console.log("欢迎欢迎啦");
+    </script>
 </head>
+
 <body>
-	<div class="flex">
+    <div class="flex">
+        <header>Welcome</header>
+        <nav>
+            <a href="javascript:;" onclick="tab(1)" id="nav_1">Portfolio</a>
+            <a href="javascript:;" onclick="tab(2)" id="nav_2">Resume</a>
+        </nav>
+        <article>
+            <section class="portfolio" id="tab_1">
+                <div>
+                    <div onclick="window.open('http://blythebao.xyz/gametest')">
+                        <img src="images/p1.png" alt="CreateJS Game">
+                    </div>
+                    <p>CreateJS小游戏</p>
+                </div>
 
-		<header>Welcome</header>
-		<nav>
-			<a href="javascript:;" onclick="tab(1)" id="nav_1">Portfolio</a>
-			<a href="javascript:;" onclick="tab(2)" id="nav_2">Resume</a>
-		</nav>
-		<article>
-			<section class="portfolio" id="tab_1">
+                <div>
+                    <div>
 
-				<div>
-					<div onclick="window.open('http://blythebao.xyz/gametest')">
-						<img src="images/p1.png" alt="CreateJS Game">
-					</div>
-					<p>CreateJS小游戏</p>
-				</div>
-
-				<div>
-					<div>
-						
-					</div>
-					<p></p>
-				</div>
-
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-
-			</section>
-
-			<section class="resume" id="tab_2">
-				<div id="html"><p>Html</p></div>
-				<div id="css"><p>CSS</p></div>
-				<div id="js"><p>Javascript</p></div>
-				<div id="jquery"><p>Jquery</p></div>
-				<div id="createjs"><p>CreateJS</p></div>
-				<div id="angularjs"><p>AngularJS</p></div>
-			</section>
-		</article>
-
-		<a href="javascript:;" id="back">⌅返回顶部</a>
-
-
-	</div>
-
+                    </div>
+                    <p>CSS幻灯片</p>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+            <section class="resume" id="tab_2">
+                <div id="html">
+                    <p>Html</p>
+                </div>
+                <div id="css">
+                    <p>CSS</p>
+                </div>
+                <div id="js">
+                    <p>Javascript</p>
+                </div>
+                <div id="jquery">
+                    <p>Jquery</p>
+                </div>
+                <div id="createjs">
+                    <p>CreateJS</p>
+                </div>
+                <div id="angularjs">
+                    <p>AngularJS</p>
+                </div>
+            </section>
+        </article>
+        <a href="javascript:;" id="back">⌅返回顶部</a>
+    </div>
 </body>
 <script type="text/javascript">
-	function tab(num){
-		for(var i=1;i<=2;i++){
-			$('#tab_'+i).hide();
-			$('#nav_'+i).css("border-bottom","none");
+function tab(num) {
+    for (var i = 1; i <= 2; i++) {
+        $('#tab_' + i).hide();
+        $('#nav_' + i).css("border-bottom", "none");
 
-		}
-			$('#tab_'+num).show();
-			$('#nav_'+num).css("border-bottom","3px solid #800000");
-			// $('#nav_'+(num==2?1:2)).css("border-bottom","none");
-	}
+    }
+    $('#tab_' + num).show();
+    $('#nav_' + num).css("border-bottom", "3px solid #800000");
+    // $('#nav_'+(num==2?1:2)).css("border-bottom","none");
+}
 
 
-	$("article").bind('scroll',function(){
-	    var len=$(this).scrollTop();
-	    if(len>=300){
-	    	$('#back').show();
-	        //显示回到顶部按钮
-	    }else{
-	        //隐藏回到顶部按钮
-	        $('#back').hide();
-	    }
-	})
-	//绑定回到顶部按钮的点击事件
-	$('#back').click(function(){
-	    //动画效果，平滑滚动回到顶部
-	    $("article").animate({ scrollTop: 0 });
-	    //不需要动画则直接回到顶部
-	    //$(document).scrollTop(0)
-	})
+$("article").bind('scroll', function() {
+        var len = $(this).scrollTop();
+        if (len >= 100) {
+        	$('header').animate({
+        		fontSize : 30
+        	});
+            $('#back').show();
+            //显示回到顶部按钮
+        } else {
+            //隐藏回到顶部按钮
+            $('#back').hide();
 
+        }
+    })
+    //绑定回到顶部按钮的点击事件
+$('#back').click(function() {
+    //动画效果，平滑滚动回到顶部
+    $("article").animate({
+        scrollTop: 0
+    });
+    //不需要动画则直接回到顶部
+    //$(document).scrollTop(0)
+})
 </script>
 
 </html>

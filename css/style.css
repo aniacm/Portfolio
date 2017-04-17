@@ -46,7 +46,7 @@ article{
 }
 
 header{
-	font-size: 30px;
+	font-size: 50px;
 	font-family: "Impact";
 }
 
@@ -72,11 +72,11 @@ nav>a:visited,nav>a:hover,nav>a:active{
 	border-bottom:3px solid #800000;
 }*/
 
-nav>a#nav_1{
+#nav_1{
 	border-bottom:3px solid #800000;
 }
 
-a#back{
+#back{
 	display: none;
 	position: fixed;
 	bottom: 20px;
@@ -92,13 +92,13 @@ section{
 }
 
 
-section.portfolio{
+.portfolio{
 	display: block;
-	width: 700px;
+	width: 100%;
 	margin: auto;
 }
 
-section.portfolio>div{
+.portfolio>div{
 	width: 220px;
 	height: 300px;
 	background-color: #FFF;
@@ -106,9 +106,10 @@ section.portfolio>div{
 	overflow: hidden;
 	text-align: center;
 	position: relative;
+	margin: 20px;
 }
 
-section.portfolio>div>div{
+.portfolio>div>div{
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
@@ -125,7 +126,7 @@ img:hover{
 	filter:alpha(opacity=80);
 }
 
-section.resume>div p{
+.resume>div p{
 	margin: 0;
 }
 
