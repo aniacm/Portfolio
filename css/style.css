@@ -91,7 +91,6 @@ nav>a:visited,nav>a:hover,nav>a:active{
 
 section{
 	/*background-color: #800040;*/
-	width: 100%;
 	height: 100%;
 	display: none;
 }
@@ -132,10 +131,14 @@ img:hover{
 }
 
 
-.resume>div{
-	display: inline-block;
+.resume{
 	background-color: #FFF;
 	margin: 0 20px;
+}
+
+.resume>div{
+	display: inline-block;
+
 }
 
 .resume>.t1{
