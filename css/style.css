@@ -45,6 +45,10 @@ article{
 */	
 }
 
+.header{
+	background-color: #FFF;
+}
+
 header{
 	font-size: 50px;
 	font-family: "Impact";
@@ -94,7 +98,7 @@ section{
 
 .portfolio{
 	display: block;
-	width: 100%;
+	width: 800px;
 	margin: auto;
 }
 
@@ -125,6 +129,20 @@ img:hover{
 	opacity: 0.8;
 	filter:alpha(opacity=80);
 }
+
+
+.resume>div{
+	display: inline-block;
+	background-color: #FFF;
+	margin: 0 20px;
+}
+
+.resume>.t1{
+	display: block;
+	margin: 20px;
+}
+
+
 
 .resume>div p{
 	margin: 0;

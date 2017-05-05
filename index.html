@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/emoji.css">
     <script>
     console.log("欢迎欢迎啦");
     </script>
@@ -14,32 +15,29 @@
 
 <body>
     <div class="flex">
+        <div class="header">        
         <header>Welcome</header>
         <nav>
             <a href="javascript:;" onclick="tab(1)" id="nav_1">Portfolio</a>
             <a href="javascript:;" onclick="tab(2)" id="nav_2">Resume</a>
         </nav>
+        </div>
+
         <article>
             <section class="portfolio" id="tab_1">
                 <div>
-                    <div><!-- onclick="window.open('http://blythebao.xyz/gametest')" -->
+                    <div onclick="window.open('http://blythebao.xyz/gametest')">
                         <img src="images/p1.png" alt="CreateJS Game">
                     </div>
                     <p>CreateJS小游戏</p>
                 </div>
 
                 <div>
-                    <div>
-
+                    <div onclick="window.open('slideshow/bootstrap-carousel.html')">
+                        <img src="slideshow/pictures/img1.jpg">
                     </div>
-                    <p>CSS幻灯片</p>
+                    <p>Bootstrap幻灯片</p>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -49,23 +47,70 @@
                 <div></div>
             </section>
             <section class="resume" id="tab_2">
+                <div class="t1">
+                    Programming skills
+                </div>
                 <div id="html">
-                    <p>Html</p>
+                    <p>Html+++</p>
+                    <div class="emoji  emoji--haha">
+                      <div class="emoji__face">
+                        <div class="emoji__eyes"></div>
+                        <div class="emoji__mouth">
+                          <div class="emoji__tongue"></div>
+                        </div>
+                      </div>
+                    </div>                
                 </div>
                 <div id="css">
-                    <p>CSS</p>
+                    <p>CSS+++</p>
+                    <div class="emoji  emoji--yay">
+                      <div class="emoji__face">
+                        <div class="emoji__eyebrows"></div>
+                        <div class="emoji__mouth"></div>
+                      </div>
+                    </div>
                 </div>
                 <div id="js">
-                    <p>Javascript</p>
+                    <p>Javascript++</p>
+                    <div class="emoji  emoji--wow">
+                      <div class="emoji__face">
+                        <div class="emoji__eyebrows"></div>
+                        <div class="emoji__eyes"></div>
+                        <div class="emoji__mouth"></div>
+                      </div>
+                    </div>
                 </div>
                 <div id="jquery">
-                    <p>Jquery</p>
+                    <p>Jquery++</p>
+                    <div class="emoji  emoji--wow">
+                      <div class="emoji__face">
+                        <div class="emoji__eyebrows"></div>
+                        <div class="emoji__eyes"></div>
+                        <div class="emoji__mouth"></div>
+                      </div>
+                    </div>
                 </div>
                 <div id="createjs">
-                    <p>CreateJS</p>
+                    <p>CreateJS+++</p>
+                    <div class="emoji  emoji--yay">
+                      <div class="emoji__face">
+                        <div class="emoji__eyebrows"></div>
+                        <div class="emoji__mouth"></div>
+                      </div>
+                    </div>
                 </div>
                 <div id="angularjs">
                     <p>AngularJS</p>
+                    <div class="emoji  emoji--sad">
+                      <div class="emoji__face">
+                        <div class="emoji__eyebrows"></div>
+                        <div class="emoji__eyes"></div>
+                        <div class="emoji__mouth"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="t1">
+                    About Me
                 </div>
             </section>
         </article>
@@ -87,14 +132,19 @@ function tab(num) {
 
 $("article").bind('scroll', function() {
         var len = $(this).scrollTop();
-        if (len >= 100) {
-        	$('header').animate({
-        		fontSize : 30
-        	});
+        if (len >= 120) {
+        	// $('header').animate({
+        	// 	fontSize : 30
+        	// });
+            $('header').css("font-size","30px");
+            $('header').html("Blythe Bao");
+
             $('#back').show();
             //显示回到顶部按钮
         } else {
             //隐藏回到顶部按钮
+            $('header').css("font-size","50px");
+
             $('#back').hide();
 
         }
@@ -106,7 +156,7 @@ $('#back').click(function() {
         scrollTop: 0
     });
     //不需要动画则直接回到顶部
-    //$(document).scrollTop()
+    //$(document).scrollTop(0)
 })
 </script>
 
