@@ -27,9 +27,23 @@
             <section class="portfolio" id="tab_1">
                 <div>
                     <div onclick="window.open('http://blythebao.xyz/gametest')">
-                        <img src="images/p1.png" alt="CreateJS Game">
+                        <img id="myImg" src="images/p1.png" alt="CreateJS Game">
                     </div>
                     <p>CreateJS小游戏</p>
+                    <a href="javascript:;" onclick="showQR()" id="showQR">扫二维码手机演示</a>
+                    <!-- 弹窗 -->
+                    <div id="myModal" class="modal">
+                     
+                      <!-- 关闭按钮 -->
+                      <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                     
+                      <!-- 弹窗内容 -->
+                      <img class="modal-content" id="img01" src="images/game.png">
+                     
+                      <!-- 文本描述 -->
+                      <div id="caption"></div>
+                    </div>
+                    
                 </div>
 
                 <div>
@@ -156,6 +170,28 @@ $('#back').click(function() {
     //不需要动画则直接回到顶部
     //$(document).scrollTop(0)
 })
+
+// 获取弹窗
+var modal = document.getElementById('myModal');
+ 
+// 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+function showQR(){
+    modal.style.display = "block";
+    modalImg.src = "images/game.png";
+    captionText.innerHTML = img.alt;
+}
+ 
+// 获取 <span> 元素，设置关闭按钮
+var span = document.getElementsByClassName("close")[0];
+ 
+// 当点击 (x), 关闭弹窗
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
 </script>
 
 </html>
