@@ -27,7 +27,7 @@
             <section class="portfolio" id="tab_1">
                 <div>
                     <div onclick="window.open('http://blythebao.xyz/gametest')">
-                        <img id="myImg" src="images/p1.png" alt="CreateJS Game">
+                        <img id="myImg" src="images/p2.png" alt="CreateJS Game">
                     </div>
                     <p>CreateJS小游戏</p>
                     <a href="javascript:;" onclick="showQR()" id="showQR">扫码手机演示</a>
@@ -52,7 +52,6 @@
                     </div>
                     <p>Bootstrap幻灯片</p>
                 </div>
-                <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -128,7 +127,7 @@
                 </div>
             </section>
         </article>
-        <a href="javascript:;" id="back">⬆︎UP</a>
+        <a href="javascript:;" id="up">⬆︎</a>
     </div>
 </body>
 <script type="text/javascript">
@@ -151,18 +150,18 @@ $("article").bind('scroll', function() {
             $('header').css("font-size","30px");
             $('header').html("Blythe Bao");
 
-            $('#back').show();
+            $('#up').show();
             //显示回到顶部按钮
         } else {
             //隐藏回到顶部按钮
             $('header').css("font-size","50px");
 
-            $('#back').hide();
+            $('#up').hide();
 
         }
     })
     //绑定回到顶部按钮的点击事件
-$('#back').click(function() {
+$('#up').click(function() {
     //动画效果，平滑滚动回到顶部
     $("article").animate({
         scrollTop: 0

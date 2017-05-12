@@ -1,8 +1,8 @@
 * {
-    font-family: "华文细黑";
     font-size: 15px;
     text-align: center;
     margin: 0;
+    padding: 0;
 }
 
 html,
@@ -30,12 +30,12 @@ body {
 article {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    /*	-webkit-box-flex: 1;
+    -webkit-box-flex: 1;
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 
-*/
+
 }
 
 .header {
@@ -73,26 +73,34 @@ nav>a:visited,nav>a:hover,nav>a:active{
     border-bottom: 3px solid #A50005;
 }
 
-#back {
+#up {
+    padding: 3px 0px;
+    text-align: center;
+    font-size: 28px;
     display: none;
+    width: 40px;
+    max-height: 40px;
+    background-color: #7F7F7F;
+    border-radius: 10px;
+    color: #E6E6E6;
     position: fixed;
     bottom: 20px;
     right: 10px;
 }
 
-#back:hover {
-    color: #393B3C;
+#up:hover {
+    color: #FFF;
+    background-color: #333333;
 }
 
 section {
-    /*background-color: #800040;*/
     height: 100%;
     display: none;
 }
 
 .portfolio {
     display: block;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -103,7 +111,6 @@ section {
     display: inline-block;
     overflow: hidden;
     text-align: center;
-    position: relative;
     margin: 20px;
     border-radius: 0 0 5px 5px;
 }
@@ -121,6 +128,7 @@ section {
 
 img {
     transition: 0.3s;
+    height: 100%;
 }
 
 img:hover {
