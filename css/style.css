@@ -126,12 +126,12 @@ section {
     cursor: pointer;
 }
 
-img {
+.displayimg {
     transition: 0.3s;
     height: 100%;
 }
 
-img:hover {
+.displayimg:hover {
     opacity: 0.8;
     filter: alpha(opacity=80);
 }
