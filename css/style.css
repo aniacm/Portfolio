@@ -28,13 +28,13 @@ body {
 }
 
 article {
+
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-box-flex: 1;
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-
 
 }
 
@@ -116,6 +116,8 @@ section {
 }
 
 .portfolio>div>div {
+    text-align: center;
+
     width: 200px;
     height: 200px;
     overflow: hidden;
