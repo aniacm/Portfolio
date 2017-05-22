@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    html,body{
+        width:100%;
+        height: 100%;
+    }
+    #center{
+        width: 100px;
+        height: 100px;
+        background-color: #0080FF;
+        position: absolute;
+        margin: auto;
+        top: 0px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    #ani{
+        width: 100px;
+        height: 100px;
+        background-color: #FF0000;
+        position: absolute;
+        right:0;
+        animation:mymove 5s 1;
+        -webkit-animation:mymove 10s 1;
+    }
+    @keyframes mymove
+    {
+        0%{
+            left:0;
+            top:0;
+        }
+        25%{
+            transform: translateX(-100px);
+            left:100%;
+            right: 0;
+            top: 0;
+        }
+        50%{
+            transform: translate(-100px,-100px);
+            left:100%;
+            top:100%;
+            bottom: 0;
+            right: 0;
+        }
+        75%{
+            transform: translateY(-100px);
+            top:100%;
+            right:100%;
+            left:0;
+            bottom: 0;
+        }
+        100%{
+            bottom: 100%;
+            top:0;
+            left: 0;
+        }    }
+
+    @-webkit-keyframes mymove
+    {
+        0%{
+            left:0;
+            top:0;
+        }
+        25%{
+            transform: translateX(-100px);
+            left:100%;
+            top: 0;
+        }
+        50%{
+            transform: translate(-100px,-100px);
+            left:100%;
+            top:100%;
+        }
+        75%{
+            transform: translateY(-100px);
+            top:100%;
+            left:0;
+        }
+        100%{
+            top:0;
+            left: 0;
+        }
+    }
+
+</style>
+<body>
+<div id="center">水平垂直居中</div>
+<div id='aniborder'>
+    <div id="ani">围绕四周1次</div>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sort</title>
+</head>
+<body>
+	<form name="myform">
+		<input name="array" type="text" size="30" value="7,4,3,1,5,7,56,-22,-1,122">
+		<input type="button" value="冒泡排序" onclick="bubbleSort()">
+	</form>
+	<p id="result"></p>
+
+	<script type="text/javascript">
+
+
+		function exchange(array, i, j) {
+
+		    var t = array[i];
+
+		    array[i] = array[j];
+
+		    array[j] = t;
+
+		}
+
+
+		function bubbleSort() {
+
+			document.getElementById('result').innerHTML="";
+
+			var num = myform.array.value;
+
+			var nums=num.split(",");
+
+			var numbers=nums.map(function(data){  
+				return +data;
+			});  
+
+			console.log(numbers);
+
+		    for (var i = 0; i < numbers.length; i++) {
+
+		        for (var j = 0; j < numbers.length - i; j++) {
+
+		            if (numbers[j] > numbers[j + 1]) {
+
+		                exchange(numbers, j, j + 1);
+
+		            }
+
+		        }
+
+		        document.getElementById('result').innerHTML+=numbers.toString()+"<br>";
+		        // document.write(numbers.toString()+"<br>");
+
+		    }
+
+		}
+	    
+
+
+
+
+	</script>
+
+</body>
+</html>
