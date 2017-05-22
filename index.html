@@ -15,12 +15,12 @@
 
 <body>
     <div class="flex">
-        <div class="header">        
-        <header>Welcome</header>
-        <nav>
-            <a href="javascript:;" onclick="tab(1)" id="nav_1">Portfolio</a>
-            <a href="javascript:;" onclick="tab(2)" id="nav_2">Resume</a>
-        </nav>
+        <div class="Header">        
+            <header>Welcome</header>
+            <nav>
+                <a href="javascript:;" onclick="tab(1)" id="nav_1">Portfolio</a>
+                <a href="javascript:;" onclick="tab(2)" id="nav_2">Resume</a>
+            </nav>
         </div>
 
         <article>
@@ -54,28 +54,63 @@
                 </div>
                 <div>
                     <div onclick="window.open('http://blythebao.xyz/phpjson')">
-                        <img class="displayimg" id="myImg" src="images/p2.png" alt="ToDoList">
+                        <img class="displayimg" src="images/p3.png" alt="ToDoList">
                     </div>
                     <p>php+json的ToDoList</p>
                 </div>
                 <div>
-                    <div>
-                        <img src="" alt="">
+                    <div onclick="window.open('jQuery瀑布流/index.html')">
+                        <img class="displayimg" src="images/p4.png" alt="waterfall">
                     </div>
-                    <p></p>
+                    <p>JQuery瀑布流</p>
+                </div>
+
+                <!-- (div>div[onclick="window.open('')"]>img.displayimg[src="images/"]^+p) -->
+
+                <!-- (div>div>div[style="background-color:#B3B3B3;width:100%;height:100%"]>{Continue})*8 -->
+
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="">
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
                     </div>
-                    <p></p>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div style="background-color:#B3B3B3;width:100%;height:100%">Continue</div>
+                    </div>
+                </div>
+
+                
             </section>
             <section class="resume" id="tab_2">
                 <div class="t1">
@@ -190,24 +225,17 @@ $('#up').click(function() {
 })
 
 // 获取弹窗
-var modal = document.getElementById('myModal');
- 
-// 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
 function showQR(){
-    modal.style.display = "block";
-    modalImg.src = "images/game.png";
-    captionText.innerHTML = img.alt;
+    $('#myModal').css('display', 'block');
+    $("#img01").attr("src","images/game.png");
+    $("#caption").html($('#myImg').attr("alt"));
 }
  
 // 获取 <span> 元素，设置关闭按钮
-var span = document.getElementsByClassName("close")[0];
  
 // 当点击 (x), 关闭弹窗
-span.onclick = function() { 
-  modal.style.display = "none";
+$('.close').on = function() { 
+    $('#myModal').css('display', 'none');
 }
 
 </script>
