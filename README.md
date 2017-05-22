@@ -1,5 +1,3 @@
-## 作品集试做！
+## 作品集链接[点击查看](https://aniacm.github.io/Portfolio/)
 
-这是我其中一个作品，用CreateJS做的小游戏 [点击查看](http://blythebao.xyz/gametest)
-
-![img1](images/p2.png)
+![img1](images/p1.png)
