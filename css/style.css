@@ -11,7 +11,8 @@ body {
 }
 
 body {
-    background-color: #E6E6E6;
+    background: #E6E6E6 url('../images/cat.png') no-repeat;
+    background-position: bottom right;
 }
 
 .flex {
